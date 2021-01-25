@@ -36,5 +36,11 @@ $("document").ready(function() {
     newPlace.addTimeOfYear($("input#season-entry").val());
     newPlace.addNotes($("input#note-entry").val());
     newPlace.addLandmark($("input#landmark-entry").val());
+    $("#show-place").slideDown();
+    $(".clickable").prepend(`<li>${newPlace.cityName}, ${newPlace.countryName}</li>`).once();
+    $("span.city").text(newPlace.cityName);
+    $("span.state").text(newPlace.stateName);
+    $("span.country").text(newPlace.countryName);
+    
   });
 });
