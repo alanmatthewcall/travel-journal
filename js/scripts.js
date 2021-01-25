@@ -23,7 +23,18 @@ Place.prototype.addLandmark = function(feature) {
 }
 
 // UI Logic: 
-// Display those properties when a user clicks on a place's name.
 
-let Place = new Place();
-$(document).read
+// let Place = new Place();
+
+$("document").ready(function() {
+  $("form#new-place").submit(function(event) {
+    event.preventDefault();
+    const inputtedCityName = $("input#city-entry").val();
+    const inputtedStateName = $("input#state-entry").val();
+    const inputtedCountryName = $("input#country-entry").val();
+    let newPlace = new Place(inputtedCityName, inputtedStateName, inputtedCountryName,);
+    newPlace.addTimeOfYear($("input#season-entry").val());
+    newPlace.addNotes($("input#note-entry").val());
+    newPlace.addLandmark($("input#landmark-entry").val());
+  });
+});

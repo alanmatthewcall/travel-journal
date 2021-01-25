@@ -12,7 +12,7 @@
 <body>
   <div class="container">
     <div class="jumbotron">
-      <h1 class="title"></h1>
+      <h1 class="title">Track Your Travel</h1>
       <p class="subtitle"></p>
     </div>
     <div class="place-entry">
@@ -42,10 +42,21 @@
           <label for="note-entry">notes</label>
           <input type="text" id="note-entry">
         </div>
-        <div>
+        <div id="buttons">
           <button type="submit" class="btn">Submit</button>
         </div>
       </form>
+      </form>
+    </div>
+    <div class="allCities">
+      <h3>All Cities</h3>
+      <ul class="clickable">
+      </ul>
+    </div>
+    <div id="show-place">
+      <p>City: <span class="city"></span></p>
+      <p>State: <span class="state"></span></p>
+      <p>Country: <span class="country"></span></p>
     </div>
   </div>
   
